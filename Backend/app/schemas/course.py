@@ -1,63 +1,48 @@
 from pydantic import BaseModel, Field
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from datetime import datetime
-from app.models.submission import SubmissionStatus
 
-# Base Answer Schema
-class AnswerBase(BaseModel):
-    questionId: str
-    text: str
 
-# Schema for answer response
-class AnswerResponse(AnswerBase):
-    id: str
-    submissionId: str
+# Base Course Schema
+class CourseBase(BaseModel):
+    title: str
+    description: Optional[str] = None
+    code: str = Field(..., description="Unique course code like CS101")
 
-    class Config:
-        from_attributes = True
 
-# Base Submission Schema
-class SubmissionBase(BaseModel):
-    assignmentId: str
-
-# Schema for submission creation
-class SubmissionCreate(SubmissionBase):
-    answers: List[AnswerBase]
-
-# Schema for submission response
-class SubmissionResponse(SubmissionBase):
-    id: str
-    studentId: str
-    submittedAt: datetime
-    status: SubmissionStatus
-
-    class Config:
-        from_attributes = True
-
-# Schema for detailed submission response (includes answers)
-class SubmissionDetailResponse(SubmissionResponse):
-    answers: List[AnswerResponse] = []
-    grade: Optional['GradeResponse'] = None
-
-    class Config:
-        from_attributes = True
-
-# Base Grade Schema
-class GradeBase(BaseModel):
-    grade: float = Field(..., ge=0, le=100)
-    comment: Optional[str] = None
-
-# Schema for grade creation/update
-class GradeCreate(GradeBase):
+# Schema for course creation
+class CourseCreate(CourseBase):
     pass
 
-# Schema for grade response
-class GradeResponse(GradeBase):
-    submissionId: str
-    gradedAt: datetime
+
+# Schema for course update
+class CourseUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    code: Optional[str] = None
+
+
+# Schema for simple course response
+class CourseResponse(CourseBase):
+    id: str
+    instructorId: str
+    createdAt: datetime
+    updatedAt: Optional[datetime] = None
 
     class Config:
         from_attributes = True
 
-# Update forward reference
-SubmissionDetailResponse.update_forward_refs()
+
+# Schema for enrolling students
+class StudentEnrollment(BaseModel):
+    studentIds: List[str]
+
+
+# Schema for detailed course response (includes enrollment info)
+class CourseDetailResponse(CourseResponse):
+    studentCount: int = 0
+    assignmentCount: int = 0
+    # Could include other aggregate data like average grades, etc.
+
+    class Config:
+        from_attributes = True
