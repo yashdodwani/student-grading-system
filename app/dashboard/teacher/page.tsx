@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function TeacherDashboardPage() {
   return (
     <div className="space-y-6">
-      <UserGreeting name="Kenneth Lo" role="Teacher" />
+      <UserGreeting name="Dr M Shilpa" role="Teacher" />
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card>
@@ -24,15 +24,7 @@ export default function TeacherDashboardPage() {
             <div className="text-3xl font-bold">42</div>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle>Courses</CardTitle>
-            <CardDescription>Courses you are teaching</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">3</div>
-          </CardContent>
-        </Card>
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle>Pending Grades</CardTitle>

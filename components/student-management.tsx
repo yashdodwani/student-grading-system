@@ -13,24 +13,24 @@ import { Edit, Trash2, Search } from "lucide-react"
 // Mock data for students
 const initialStudents = [
   {
-    id: "1809853J-I011-0013",
-    name: "Cyx",
+    id: "1bi23is099",
+    name: "rishika snehi",
     password: "cyx667",
-    email: "godkillerchen@gmail.com",
+    email: "rishikas123@gmail.com",
     course: "CS108",
   },
   {
-    id: "1809853Z-I011-0045",
-    name: "Kennard Wang",
-    password: "wyy1809",
-    email: "wangkennard@gmail.com",
+    id: "1bi23is143",
+    name: "Yash Dodwani",
+    password: "yashDod809",
+    email: "yahsodowani23@gmail.com",
     course: "CS108",
   },
   {
-    id: "1909853U-I011-0151",
-    name: "Kiera Yi",
+    id: "1bi23is093",
+    name: "Rakshita",
     password: "yz123456",
-    email: "yz@gmail.com",
+    email: "raks123@gmail.com",
     course: "CS108",
   },
 ]

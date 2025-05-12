@@ -35,11 +35,7 @@ export function TeacherSidebar() {
       href: "/dashboard/teacher/assignments",
       icon: <FileText className="mr-2 h-4 w-4" />,
     },
-    {
-      title: "Courses",
-      href: "/dashboard/teacher/courses",
-      icon: <BookOpen className="mr-2 h-4 w-4" />,
-    },
+
     {
       title: "Register New",
       href: "/dashboard/teacher/register",

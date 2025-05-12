@@ -21,10 +21,10 @@ export function NewAssignmentForm() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({
     courseId: "CS108",
-    name: "",
-    weight: "",
-    deadline: "",
-    questions: [{ text: "" }, { text: "" }],
+    name: "DBMS mini project",
+    weight: "25",
+    deadline: "13 may 2025",
+    questions: [{ text: "make a mini project using sql" }, { text: "" }],
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

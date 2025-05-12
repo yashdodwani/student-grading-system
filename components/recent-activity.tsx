@@ -5,9 +5,9 @@ const activities = [
   {
     id: 1,
     user: {
-      name: "Kennard Wang",
+      name: "Rishika snehi",
       image: "/placeholder-user.jpg",
-      initials: "KW",
+      initials: "RS",
     },
     action: "submitted",
     target: "Final Project",
@@ -16,20 +16,20 @@ const activities = [
   {
     id: 2,
     user: {
-      name: "Cyx",
+      name: "Sarika",
       image: "/placeholder-user.jpg",
-      initials: "CX",
+      initials: "sk",
     },
     action: "submitted",
-    target: "Assignment 2",
+    target: "DBMS assignment",
     time: "5 hours ago",
   },
   {
     id: 3,
     user: {
-      name: "Kiera Yi",
+      name: "Likita MG",
       image: "/placeholder-user.jpg",
-      initials: "KY",
+      initials: "LMG",
     },
     action: "registered",
     target: "CS108",
@@ -38,23 +38,23 @@ const activities = [
   {
     id: 4,
     user: {
-      name: "Kenneth Lo",
+      name: "Saksham Upadhya",
       image: "/placeholder-user.jpg",
-      initials: "KL",
+      initials: "Su",
     },
     action: "created",
-    target: "Assignment 2",
+    target: "UHV placards submitted",
     time: "2 days ago",
   },
   {
     id: 5,
     user: {
-      name: "Kennard Wang",
+      name: "Shreya S",
       image: "/placeholder-user.jpg",
-      initials: "KW",
+      initials: "SS",
     },
     action: "submitted",
-    target: "Assignment 1",
+    target: "DBMS project submitted",
     time: "3 days ago",
   },
 ]
